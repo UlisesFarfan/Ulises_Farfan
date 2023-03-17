@@ -45,3 +45,7 @@ pre[class*='language-'] {
 .token.combinator {
   color: theme('colors.zinc.400');
 }
+
+html {
+  scroll-behavior: smooth;
+}
