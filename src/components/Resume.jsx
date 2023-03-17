@@ -3,6 +3,7 @@ import techSkills from '@/data/techskills'
 import axios from 'axios'
 import fileDownload from 'js-file-download'
 import { BsList } from 'react-icons/bs'
+import { toast } from 'react-hot-toast'
 
 function ArrowDownIcon(props) {
   return (
@@ -17,11 +18,29 @@ function ArrowDownIcon(props) {
   )
 }
 
-const downloadCv = async () => {
-  const { data } = await axios.get('/download', {
-    responseType: 'blob'
-  })
-  fileDownload(data, 'ULISES_FARFAN_FULL_STACK_DEVELOPER.pdf')
+const downloadCv = async (e) => {
+  e.preventDefault()
+  toast.promise(
+    axios.get('/download', {
+      responseType: 'blob'
+    })
+      .then((response) => {
+        fileDownload(response.data, 'ULISES_FARFAN_FULL_STACK_DEVELOPER.pdf')
+      })
+    ,
+    {
+      loading: 'Saving...',
+      success: <b>Resume download successfully!</b>,
+      error: <b>The download failed.</b>,
+    },
+    {
+      style: {
+        borderRadius: '10px',
+        background: '#333',
+        color: '#fff',
+      },
+    }
+  );
 }
 
 function Resume() {
