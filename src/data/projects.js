@@ -21,7 +21,7 @@ const projects = [
     description: 'A web app to view and search for video games.',
     techs: 'JavaScript, React, Node.js, Express.js, PostgresSQL.',
     github: 'https://github.com/UlisesFarfan/GameApp',
-    demo: 'https://github.com/UlisesFarfan/GameApp',
+    demo: false,
   },
 ]
 
