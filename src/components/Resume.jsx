@@ -1,5 +1,5 @@
 import { Button } from '@/components/Button'
-import techSkills from '@/lib/techskills'
+import techSkills from '@/data/techskills'
 import axios from 'axios'
 import fileDownload from 'js-file-download'
 import { BsList } from 'react-icons/bs'
