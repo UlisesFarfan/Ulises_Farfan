@@ -50,7 +50,7 @@ export default function Home({ articles }) {
               ))}
             </section>
           </div>
-          <div className="space-y-10 lg:pl-16 xl:pl-24">
+          <div className="space-y-10 lg:pl-16 xl:pl-24 mb-12">
             <Resume />
             <Contact />
           </div>

@@ -6,6 +6,9 @@ import {
   LinkedInIcon,
   SocialLink
 } from '@/components/SocialIcons'
+import axios from 'axios'
+import { useState } from 'react'
+import { toast, saveSettings } from 'react-hot-toast'
 
 function MailIcon(props) {
   return (
@@ -31,10 +34,48 @@ function MailIcon(props) {
 }
 
 function Contact() {
+
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    toast.promise(
+      axios.post('/', {
+        name: name,
+        gmail: email,
+        msg: message
+      })
+        .then(() => {
+          setIsSubmitted(true)
+          setName('')
+          setEmail('')
+          setMessage('')
+        }),
+      {
+        loading: 'Saving...',
+        success: <b>Message sent successfully!</b>,
+        error: <b>Message sent error.</b>,
+      },
+      {
+        style: {
+          borderRadius: '10px',
+          background: '#333',
+          color: '#fff',
+        },
+      }
+    );
+  }
+
   return (
     <form
       action="/thank-you"
       className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
+      onSubmit={handleSubmit}
     >
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <MailIcon className="h-6 w-6 flex-none" />
@@ -69,6 +110,8 @@ function Contact() {
           aria-label="Your Email"
           required
           className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <input
           type="text"
@@ -76,6 +119,8 @@ function Contact() {
           aria-label="Your Name"
           required
           className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
         />
         <textarea
           type="text"
@@ -83,8 +128,10 @@ function Contact() {
           aria-label="Your Message"
           required
           className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
         />
-        <Button variant="secondary" className="group mt-6 w-full" type='submit'>
+        <Button variant="secondary" className="group mt-6 w-full" type='submit' disabled={false}>
           Send
         </Button>
       </div>

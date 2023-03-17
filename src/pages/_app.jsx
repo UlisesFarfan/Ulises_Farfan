@@ -5,6 +5,7 @@ import { Header } from '@/components/Header'
 import '@/styles/tailwind.css'
 import 'focus-visible'
 import axios from 'axios'
+import { Toaster } from 'react-hot-toast'
 
 function usePrevious(value) {
   let ref = useRef()
@@ -34,6 +35,10 @@ export default function App({ Component, pageProps, router }) {
           <Component previousPathname={previousPathname} {...pageProps} />
         </main>
       </div>
+      <Toaster
+        position="bottom-right"
+        reverseOrder={false}
+      />
     </>
   )
 }
