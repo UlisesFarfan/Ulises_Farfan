@@ -9,29 +9,30 @@ import {
 import axios from 'axios'
 import { useState } from 'react'
 import { toast, saveSettings } from 'react-hot-toast'
+import { MdEmail } from 'react-icons/md'
 
 function MailIcon(props) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-      {...props}
-    >
-      <path
-        d="M2.75 7.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z"
-        className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
-      />
-      <path
-        d="m4 6 6.024 5.479a2.915 2.915 0 0 0 3.952 0L20 6"
-        className="stroke-zinc-400 dark:stroke-zinc-500"
-      />
-    </svg>
-  )
-}
+    return (
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+        {...props}
+      >
+        <path
+          d="M2.75 7.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z"
+          className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
+        />
+        <path
+          d="m4 6 6.024 5.479a2.915 2.915 0 0 0 3.952 0L20 6"
+          className="stroke-zinc-400 dark:stroke-zinc-500"
+        />
+      </svg>
+    )
+  }
 
 function Contact() {
 
@@ -78,7 +79,7 @@ function Contact() {
       onSubmit={handleSubmit}
     >
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <MailIcon className="h-6 w-6 flex-none" />
+        <MdEmail className="h-6 w-6 flex-none" />
         <span className="ml-3">Contact me</span>
       </h2>
       <div className="mt-6 flex gap-6">
@@ -131,7 +132,7 @@ function Contact() {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         />
-        <Button variant="secondary" className="group mt-6 w-full" type='submit' disabled={false}>
+        <Button variant="secondary" className="group mt-6 w-full text-xs text-zinc-600 dark:text-white" type='submit' disabled={false}>
           Send
         </Button>
       </div>

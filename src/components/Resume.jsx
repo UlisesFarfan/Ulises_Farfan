@@ -2,7 +2,7 @@ import { Button } from '@/components/Button'
 import techSkills from '@/data/techskills'
 import axios from 'axios'
 import fileDownload from 'js-file-download'
-import { BsList } from 'react-icons/bs'
+import { BsBriefcaseFill } from 'react-icons/bs'
 import { toast } from 'react-hot-toast'
 
 function ArrowDownIcon(props) {
@@ -47,7 +47,7 @@ function Resume() {
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <BsList className="h-6 w-6 flex-none" />
+        <BsBriefcaseFill className="h-5 w-5 flex-none" />
         <span className="ml-3">TECH SKILLS</span>
       </h2>
       <ol className="mt-6 space-y-4 h-100 snap-both overflow-y-auto">
@@ -64,7 +64,7 @@ function Resume() {
           </li>
         ))}
       </ol>
-      <Button variant="secondary" className="group mt-6 w-full" onClick={downloadCv}>
+      <Button variant="secondary" className="group mt-6 w-full text-xs text-zinc-600 dark:text-white" onClick={downloadCv}>
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>

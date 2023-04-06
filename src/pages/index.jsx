@@ -20,7 +20,7 @@ export default function Home({ articles }) {
           <h1 className="text-4xl flex justify-center font-bold tracking-tight text-zinc-600 dark:text-zinc-100 text-6xl md:text-8xl lg:text-9xl">
             Ulises Farfan
           </h1>
-          <h2 className="text-4xl flex justify-center font-bold tracking-tight text-teal-600 lg:text-5xl">
+          <h2 className="text-4xl flex justify-center font-bold tracking-tight text-teal-400 lg:text-5xl">
             Full Stack Developer
           </h2>
           <div className='w-full flex justify-center mt-6'>
@@ -33,7 +33,7 @@ export default function Home({ articles }) {
       <Container className="mt-24 md:mt-28 h-screen" id="resume">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2 pt-6">
           <div className="flex flex-col gap-6">
-            <h2 className="text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
+            <h2 className="text-2xl font-bold tracking-tight -ml-2 text-zinc-800 dark:text-zinc-100">
               Works
             </h2>
             <section>
@@ -41,7 +41,7 @@ export default function Home({ articles }) {
                 <Card key={works.slug} item={work} index={index} items={works} />
               ))}
             </section>
-            <h2 className="text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
+            <h2 className="text-2xl font-bold tracking-tight -ml-2 text-zinc-800 dark:text-zinc-100">
               Projects
             </h2>
             <section>
