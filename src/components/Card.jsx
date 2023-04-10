@@ -7,7 +7,7 @@ import { SocialLink } from './SocialIcons'
 
 function Card({ item, index, items }) {
   return (
-    <article className={`${items.length - 1 === index ? "border-l-2 border-zinc-900" : "border-l-2 border-teal-400"}`}>
+    <article className={`${items.length - 1 === index ? "border-l-2 border-white dark:border-zinc-900" : "border-l-2 border-teal-400"}`}>
       <div className="flex flex-start">
         <div className="bg-teal-400 w-6 h-6 flex items-center justify-center rounded-full -ml-3" />
         <section className="block rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40 px-6 pt-2 pb-6 w-full ml-6 mb-6">
