@@ -1,5 +1,13 @@
 const projects = [
   {
+    title: 'Web Layout - Web App',
+    date: '2 day',
+    description: 'Example of web layout.',
+    techs: 'TypeScript, NextJs, SCSS.',
+    github: 'https://github.com/UlisesFarfan/AENIMA',
+    demo: "https://aenima.vercel.app"
+  },
+  {
     title: 'ShortLink - Web App',
     date: '1 day',
     description: 'A web app to create short links.',
