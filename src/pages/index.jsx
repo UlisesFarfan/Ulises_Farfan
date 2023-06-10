@@ -21,7 +21,7 @@ export default function Home({ articles }) {
             Ulises Farfan
           </h1>
           <h2 className="text-4xl flex justify-center font-bold tracking-tight text-teal-400 lg:text-5xl">
-            Full Stack Developer
+            Full Stack Developer && QA Tester
           </h2>
           <div className='w-full flex justify-center mt-6'>
             <Button href="#resume" className="mt-8" variant="secondary">
