@@ -7,8 +7,8 @@ const techSkills = [
     {
         name: 'TypeScript',
         icon: TbBrandTypescript,
-        seniority: 'Junior',
-        experience: '5 months working',
+        seniority: '',
+        experience: '',
     },
     {
         name: 'JavaScript',
