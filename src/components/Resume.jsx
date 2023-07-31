@@ -58,8 +58,6 @@ function Resume() {
             </div>
             <div>
               <h3 className='text-sm font-semibold text-zinc-900 dark:text-zinc-100'>{role.name}</h3>
-              <p className="text-xs text-zinc-600 dark:text-zinc-400">{role.seniority}</p>
-              <p className="text-xs text-zinc-600 dark:text-zinc-400">{role.experience}</p>
             </div>
           </li>
         ))}
@@ -73,3 +71,6 @@ function Resume() {
 }
 
 export default Resume
+
+//              <p className="text-xs text-zinc-600 dark:text-zinc-400">{role.seniority}</p>
+//              <p className="text-xs text-zinc-600 dark:text-zinc-400">{role.experience}</p>
