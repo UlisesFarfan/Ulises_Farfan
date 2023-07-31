@@ -56,7 +56,7 @@ function Resume() {
             <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
               <role.icon className='text-3xl text-teal-500' />
             </div>
-            <div>
+            <div className="flex justify-center items-center">
               <h3 className='text-sm font-semibold text-zinc-900 dark:text-zinc-100'>{role.name}</h3>
             </div>
           </li>
