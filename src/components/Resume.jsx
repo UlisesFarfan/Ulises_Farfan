@@ -51,16 +51,33 @@ function Resume() {
         <span className="ml-3">TECH SKILLS</span>
       </h2>
       <ol className="mt-6 space-y-4 h-100 snap-both overflow-y-auto">
-        {techSkills.map((role, roleIndex) => (
-          <li key={roleIndex} className="flex gap-4 snap-center">
-            <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <role.icon className='text-3xl text-teal-500' />
-            </div>
-            <div className="flex justify-center items-center">
-              <h3 className='text-sm font-semibold text-zinc-900 dark:text-zinc-100'>{role.name}</h3>
-            </div>
-          </li>
-        ))}
+        {techSkills.map((role, index, role2) => {
+          role2 = index + 1 < role2.length ? role2[index + 1] : role2[index];
+          return (
+            <>
+              {index % 2 === 0 &&
+                <li key={index} className="flex snap-center justify-between">
+                  <div className="flex gap-4 w-1/2">
+                    <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                      <role.icon className='text-3xl text-teal-500' />
+                    </div>
+                    <div className="flex justify-center items-center">
+                      <h3 className='text-sm font-semibold text-zinc-900 dark:text-zinc-100'>{role.name}</h3>
+                    </div>
+                  </div>
+                  <div className="flex gap-4 w-1/2">
+                    <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                      <role2.icon className='text-3xl text-teal-500' />
+                    </div>
+                    <div className="flex justify-center items-center">
+                      <h3 className='text-sm font-semibold text-zinc-900 dark:text-zinc-100'>{role2.name}</h3>
+                    </div>
+                  </div>
+                </li>
+              }
+            </>
+          )
+        })}
       </ol>
       <Button variant="secondary" className="group mt-6 w-full text-xs text-zinc-600 dark:text-white" onClick={downloadCv}>
         Download CV

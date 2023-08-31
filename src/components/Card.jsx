@@ -17,7 +17,7 @@ function Card({ item, index, items }) {
           </header>
           <section className="flex flex-wrap">
             {item.description && <p class="text-xs text-zinc-600 dark:text-zinc-400 w-full">{item.description}</p>}
-            {item.techs && <p class="text-xs text-zinc-600 dark:text-zinc-400 w-full">Working with: {item.techs}</p>}
+            {item.techs && <p class="text-xs text-zinc-600 dark:text-zinc-400 w-full">Developed with: {item.techs}</p>}
           </section>
           <footer className='mt-4 gap-2 flex'>
             {item.github && <SocialLink href={item.github} icon={GitHubIcon} />}

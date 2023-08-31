@@ -1,5 +1,13 @@
 const projects = [
   {
+    title: 'Web App - Chat App',
+    date: '5 months',
+    description: 'A Chat Web App.',
+    techs: 'TypeScript, React, TailwindCss, Formik, Socket.io, Yup, Express, JWT, Passport, MongoDB.',
+    github: 'https://github.com/UlisesFarfan/chat-app',
+    demo: "https://chat-app-eta-cyan.vercel.app"
+  },
+  {
     title: 'Web Layout - Web App',
     date: '2 day',
     description: 'Example of web layout.',
