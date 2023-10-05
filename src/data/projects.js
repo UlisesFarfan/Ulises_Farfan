@@ -1,10 +1,18 @@
 const projects = [
   {
+    title: 'Web App - Todo App',
+    date: '2 weeks',
+    description: 'A ToDo list App with WorkSpaces, Columns and Notes fully customizable.',
+    techs: 'React, TypeScript, JavaScript, Golang, Gin Gonic, JWT, MongoDb, TailwindCss, NextUi, Redux Toolkit, Google Login, Dnd Kit.',
+    github: 'https://github.com/UlisesFarfan/api-todo',
+    demo: "https://todoappbyulises.vercel.app/"
+  },
+  {
     title: 'Web App - Chat App',
     date: '2 months',
     description: 'A Chat Web App.',
     techs: 'TypeScript, React, TailwindCss, Formik, Socket.io, Yup, Express, JWT, Passport, MongoDB.',
-    github: 'https://github.com/UlisesFarfan/chat-app',
+    github: 'https://github.com/UlisesFarfan/chat-api',
     demo: "https://chat-app-eta-cyan.vercel.app"
   },
   {

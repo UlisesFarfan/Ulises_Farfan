@@ -1,6 +1,7 @@
 import { TbBrandTypescript, TbBrandNextjs } from 'react-icons/tb';
 import { DiJavascript1 } from 'react-icons/di';
 import { FaReact, FaSass, FaLess } from 'react-icons/fa';
+import { TbBrandGolang } from 'react-icons/tb';
 import {
   SiRedux,
   SiHtml5,
@@ -26,6 +27,12 @@ const techSkills = [
   {
     name: 'JavaScript',
     icon: DiJavascript1,
+    seniority: '',
+    experience: '',
+  },
+  {
+    name: 'Golang',
+    icon: TbBrandGolang,
     seniority: '',
     experience: '',
   },
