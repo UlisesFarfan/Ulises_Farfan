@@ -1,7 +1,7 @@
 const projects = [
   {
     title: 'Web App - Todo App',
-    date: '2 weeks',
+    date: '3 weeks',
     description: 'A ToDo list App with WorkSpaces, Columns and Notes fully customizable.',
     techs: 'React, TypeScript, JavaScript, Golang, Gin Gonic, JWT, MongoDb, TailwindCss, NextUi, Redux Toolkit, Google Login, Dnd Kit.',
     github: 'https://github.com/UlisesFarfan/api-todo',
