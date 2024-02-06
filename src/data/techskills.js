@@ -1,6 +1,6 @@
 import { TbBrandTypescript, TbBrandNextjs } from 'react-icons/tb';
 import { DiJavascript1 } from 'react-icons/di';
-import { FaReact, FaSass, FaLess } from 'react-icons/fa';
+import { FaReact, FaSass, FaLess, FaJava } from 'react-icons/fa';
 import { TbBrandGolang } from 'react-icons/tb';
 import {
   SiRedux,
@@ -14,7 +14,11 @@ import {
   SiSelenium,
   SiJirasoftware,
   SiApachejmeter,
-  SiTrello
+  SiTrello,
+  SiServerless,
+  SiExpress,
+  SiAmazonaws,
+  SiPython
 } from 'react-icons/si';
 
 const techSkills = [
@@ -33,6 +37,36 @@ const techSkills = [
   {
     name: 'Golang',
     icon: TbBrandGolang,
+    seniority: '',
+    experience: '',
+  },
+  {
+    name: 'Java',
+    icon: FaJava,
+    seniority: '',
+    experience: '',
+  },
+  {
+    name: 'Python',
+    icon: SiPython,
+    seniority: '',
+    experience: '',
+  },
+  {
+    name: 'AWS',
+    icon: SiAmazonaws,
+    seniority: '',
+    experience: '',
+  },
+  {
+    name: 'Serverless',
+    icon: SiServerless,
+    seniority: '',
+    experience: '',
+  },
+  {
+    name: 'Express.Js',
+    icon: SiExpress,
     seniority: '',
     experience: '',
   },
