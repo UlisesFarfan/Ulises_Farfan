@@ -1,6 +1,6 @@
 const works = [
   {
-    title: 'Bitseat: Full Stack Web & Mobile Developer - November 2023 to Present',
+    title: 'Bitseat: Full Stack Web & Mobile Developer - November 2023 to February 2024',
     date: '',
     description: false,
     techs: 'TypeScript, JavaScript, React, Node.js, Express.js, Serverless, AWS, SCSS, Flutter, Dart.'
